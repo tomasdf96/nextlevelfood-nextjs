@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  flex-direction: column;
   padding: 2rem 1rem;
   gap: 3rem;
   margin: auto;
@@ -8,8 +9,9 @@
 
 .image {
   position: relative;
-  width: 30rem;
-  height: 20rem;
+  width: 16rem;
+  height: 8rem;
+  margin-left: 1rem;
 }
 
 .header img {
@@ -69,7 +71,7 @@
   border-radius: 8px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  max-width: 60rem;
+  max-width: 90%;
   margin: 2rem auto;
   animation: fade-slide-in-from-bottom 1s ease-out forwards;
   white-space: pre-line;
@@ -85,7 +87,7 @@
 
 .actions {
   text-align: right;
-  max-width: 78rem;
+  max-width: 95%;
   margin-bottom: 2rem;
 }
 
@@ -113,6 +115,25 @@
   background: #ccc;
   color: #979797;
   cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .image {
+    width: 30rem;
+    height: 20rem;
+  }
+
+  .instructions {
+    max-width: 60rem;
+  }
+
+  .actions {
+    max-width: 78rem;
+  }
 }
 
 @keyframes fade-slide-in-from-left {
