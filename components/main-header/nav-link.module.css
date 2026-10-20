@@ -1,4 +1,6 @@
 .link{
+  display: inline-block;
+  text-align: left;
   text-decoration: none;
   color: #ddd6cb;
   font-weight: bold;
