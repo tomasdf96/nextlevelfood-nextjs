@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  flex-direction: column;
   gap: 3rem;
   margin: 3rem auto;
   width: 90%;
@@ -7,8 +8,8 @@
 }
 
 .slideshow {
-  width: 40rem;
-  height: 25rem;
+  width: 20rem;
+  height: 12rem;
 }
 
 .hero {
@@ -71,5 +72,20 @@
   max-width: 50rem;
   width: 90%;
   margin: 2rem auto;
-  text-align: center;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .slideshow {
+    width: 40rem;
+    height: 25rem;
+  }
+
+  .section {
+    text-align: center;
+  }
 }
