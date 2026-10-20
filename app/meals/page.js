@@ -12,9 +12,6 @@ export const metadata = {
 
 async function Meals() {
   const meals = await getMeals();
-  if (meals.length === 0) {
-    return <p className={classes.loading}>No Meals Added Yet!</p>;
-  }
   return <MealsGrid meals={meals} />;
 }
 
