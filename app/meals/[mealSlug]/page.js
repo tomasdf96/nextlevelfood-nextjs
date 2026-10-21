@@ -30,6 +30,13 @@ async function Meal({ params }) {
     notFound();
   }
 
+  const date = meal.createdAt.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <>
       <header className={classes.header}>
@@ -52,6 +59,7 @@ async function Meal({ params }) {
       <main>
         <p className={classes.instructions}>{meal.instructions}</p>
         <div className={classes.actions}>
+          <p style={{ color: "#ddd6cb" }}>shared {date}</p>
           <form action={handleDeleteMeal.bind(null, meal.slug)}>
             <MealsFormSubmit actionText="Delete Meal" />
           </form>
